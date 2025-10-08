@@ -1,0 +1,14 @@
+title: "Gustavo Lindenberg Pacheco - Portfolio"
+description: "Portfolio"
+theme: minima
+
+minima:
+  skin: classic
+
+quiet: true
+
+header_pages:
+  - index.html
+  - music.html
+  - cs.html
+  - projsnwork.html

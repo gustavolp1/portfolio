@@ -1,0 +1,143 @@
+/* Define light and dark themes with CSS variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --link-color: #0077cc;
+  --card-bg: #f4f4f4;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --link-color: #66b3ff;
+  --card-bg: #1e1e1e;
+}
+
+/* Apply theme to page */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Links, buttons, etc. */
+a {
+  color: var(--link-color);
+}
+
+.toggles {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button#toggle-lang {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+/* === MUSIC PAGE STYLES === */
+.track {
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Alternate backgrounds */
+.track.odd {
+  background-color: var(--card-bg);
+}
+
+.track.even {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Make the alternation adjust for dark mode */
+[data-theme="dark"] .track.even {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.track h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.track p {
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  outline: none;
+  border-radius: 8px;
+}
+
+/* Back link */
+.back-link {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-link a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--link-color);
+  font-size: 1.1rem;
+}
+
+.back-link a:hover {
+  opacity: 0.8;
+}
+
+/* === TRACK IMAGE STYLING === */
+.track-image {
+  display: block;
+  width: 50%;
+  max-width: 500px;
+  margin: 0.5rem auto 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.track-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Optional: add subtle separators */
+.track h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.track img + .audio-pair,
+.track img + audio {
+  margin-top: 1rem;
+}
