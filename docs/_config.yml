@@ -1,4 +1,4 @@
-title: "Gustavo Lindenberg Pacheco - Portfolio"
+title: "Gustavo Lindenberg Pacheco"
 description: "Portfolio"
 theme: minima
 
@@ -10,5 +10,4 @@ quiet: true
 header_pages:
   - index.html
   - music.html
-  - cs.html
   - projsnwork.html
