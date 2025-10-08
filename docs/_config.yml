@@ -11,3 +11,6 @@ header_pages:
   - index.html
   - music.html
   - projsnwork.html
+
+include:
+  - favicon.ico
